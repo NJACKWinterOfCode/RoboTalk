@@ -1,7 +1,10 @@
 package io.github.njackwinterofcode.robotalk;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
@@ -13,59 +16,20 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextToSpeech textToSpeech;
-    EditText text;
-    Button convertButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        text = findViewById(R.id.editText);
-        convertButton = findViewById(R.id.button);
-        textToSpeech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onInit(int status) {
-                if (status == TextToSpeech.SUCCESS){
-                    int lang = textToSpeech.setLanguage(Locale.US);
-
-                    if(lang == TextToSpeech.LANG_MISSING_DATA || lang == TextToSpeech.LANG_NOT_SUPPORTED){
-                        Log.i("Language Support", "Not Supported");
-                    }
-                    else{
-                        Log.i("Language Support", "Supported");
-                    }
-                    Log.i("TTS", "Initialization Success");
-                }
-                else{
-                    Toast.makeText(MainActivity.this, "TTS Initialization failed", Toast.LENGTH_SHORT).show();
-                }
+            public void run() {
+                startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                finish();
             }
-        });
+        },2000);
 
-        convertButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String data = text.getText().toString();
-                Log.i("TTS", "Button Clicked" + data);
-                int speechStatus = textToSpeech.speak(data, TextToSpeech.QUEUE_FLUSH,null);
-                if(speechStatus == TextToSpeech.ERROR){
-                    Log.e("TTS ", "Error in conversion");
-                }
-            }
-        });
-
-
-
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if(textToSpeech !=null){
-            textToSpeech.stop();
-            textToSpeech.shutdown();
-        }
     }
 }
