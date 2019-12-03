@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RoboTalk</string>
+    <string name="robotalk">RoboTalk</string>
+    <string name="choose_a_service">Choose a Service</string>
+    <string name="speech_to_text">Speech to Text</string>
+    <string name="text_to_speech">Text to Speech</string>
+    <string name="robotalk">RoboTalk</string>
+    <string name="todo">TODO</string>
+    <string name="speech_to_text">Speech to Text</string>
+    <string name="start">Start</string>
+    <string name="text_to_speech">Text to Speech</string>
+    <string name="add_text_here">Add text here</string>
+    <string name="convert_to_speech">Convert to Speech</string>
+</resources>
