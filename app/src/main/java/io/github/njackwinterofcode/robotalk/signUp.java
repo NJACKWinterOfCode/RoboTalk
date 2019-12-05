@@ -20,8 +20,6 @@ public class signUp extends AppCompatActivity {
     Button button;
     TextView em,pwd,cpwd,nme,adhr;
     FirebaseAuth firebaseAuth;
-
-
     public void signUp(View view){
         final String email = em.getText().toString();
         String password = pwd.getText().toString();
@@ -29,7 +27,6 @@ public class signUp extends AppCompatActivity {
 
         final String userName = nme.getText().toString();
         if(email.isEmpty()){
-
             em.setError("Please enter your E-mail");
             em.requestFocus();
 
@@ -42,14 +39,10 @@ public class signUp extends AppCompatActivity {
             pwd.setError("Please enter your Password");
             pwd.requestFocus();
         }
-
         else if(cpassword.isEmpty()){
             cpwd.setError("Please confirm your Password");
             cpwd.requestFocus();
         }
-
-
-
         else if(email.isEmpty() && password.isEmpty() && userName.isEmpty() && cpassword.isEmpty()){
 
             Toast.makeText(signUp.this, "Please enter the required fields", Toast.LENGTH_SHORT).show();
@@ -72,15 +65,11 @@ public class signUp extends AppCompatActivity {
                             startActivity(signInn);
                             finish();
 
-
-
                         } else {
                             Toast.makeText(signUp.this, "Sign-up Failed.", Toast.LENGTH_SHORT).show();
                         }
-
                     }
                 });
-
             }
             else {
                 Toast.makeText(signUp.this, "Unexpected Error. Sign-up Failed.", Toast.LENGTH_SHORT).show();
@@ -89,15 +78,12 @@ public class signUp extends AppCompatActivity {
         else{
             Toast.makeText(signUp.this, "Sign-Up Failed.", Toast.LENGTH_SHORT).show();
         }
-
-
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
 
         em = findViewById(R.id.editText3);
         pwd = findViewById(R.id.editText4);

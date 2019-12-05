@@ -15,8 +15,6 @@ public class HomeActivity extends AppCompatActivity {
     Button tts;
     Button stt;
     Button logOut;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,21 +23,18 @@ public class HomeActivity extends AppCompatActivity {
         tts = findViewById(R.id.button1);
         stt = findViewById(R.id.button2);
         logOut = findViewById(R.id.logOut);
-
         tts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomeActivity.this, textToSpeech.class));
             }
         });
-
         stt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomeActivity.this,speechToText.class));
             }
         });
-
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
