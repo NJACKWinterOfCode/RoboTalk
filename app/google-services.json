@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "500064935526",
+    "firebase_url": "https://robotalk-4dbf2.firebaseio.com",
+    "project_id": "robotalk-4dbf2",
+    "storage_bucket": "robotalk-4dbf2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500064935526:android:1dd43cf0a2fe02bf14d7a7",
+        "android_client_info": {
+          "package_name": "io.github.njackwinterofcode.robotalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500064935526-ihveafs1u7nj70i1bku42vp36n5527jd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.github.njackwinterofcode.robotalk",
+            "certificate_hash": "24b518cc444df7c002bb83e51552694cafd5a7d1"
+          }
+        },
+        {
+          "client_id": "500064935526-tuv7hjisaj2am9ktpnp431vo5oreb3nt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIuMPXgMLu6VjMCpCTWocNz3Iwk6tKpxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500064935526-tuv7hjisaj2am9ktpnp431vo5oreb3nt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
