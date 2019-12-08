@@ -22,16 +22,20 @@ public class LoginActivity extends AppCompatActivity {
     TextView emailID;
     TextView password;
     FirebaseAuth firebaseAuth;
+    Button logOut;
     private FirebaseAuth.AuthStateListener authStateListener;
+    Button skip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        logOut = findViewById(R.id.logOut);
         emailID = findViewById(R.id.editText3);
         password = findViewById(R.id.editText4);
         firebaseAuth = FirebaseAuth.getInstance();
+        skip = findViewById(R.id.skip);
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -87,7 +91,16 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Error Occured", Toast.LENGTH_SHORT).show();
                 }
             }
-        });}
+        });
+
+                skip.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                    }
+                });
+
+    }
         @Override
         protected void onStart() {
         super.onStart();

@@ -9,4 +9,9 @@
     <string name="hintname">Name</string>
     <string name="hintconpass">Confirm Password</string>
     <string name="SignUp">Sign-up</string>
+    <string name="textToSpeechHeading">Text to Speech</string>
+    <string name="hintText">Add text here</string>
+    <string name="TTSButton">Convert to Speech</string>
+    <string name="Pitch">Pitch</string>
+    <string name="speechRate">Set speech rate</string>
 </resources>
