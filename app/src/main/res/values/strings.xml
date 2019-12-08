@@ -14,4 +14,7 @@
     <string name="TTSButton">Convert to Speech</string>
     <string name="Pitch">Pitch</string>
     <string name="speechRate">Set speech rate</string>
+    <string name="facebook_application_id">1344966075708813</string>
+    <string name="fb_login_protocol_scheme">fb1344966075708813</string>
+
 </resources>
