@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/ic_launcher6"
     tools:context=".speechToText">
-
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Speech to Text"
@@ -14,9 +15,10 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textOutput"
@@ -27,8 +29,8 @@
         android:layout_marginTop="104dp"
         android:layout_marginEnd="8dp"
         android:text=""
-        android:textColor="#03A9F4"
-        android:textSize="30sp"
+        android:textColor="#000000"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
@@ -38,17 +40,17 @@
 
     <Button
         android:id="@+id/startDictation"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="58dp"
-
+        android:background="#9400D3"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="408dp"
         android:layout_marginEnd="8dp"
         android:onClick="onClick"
         android:text="Start"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.788"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textOutput" />
 

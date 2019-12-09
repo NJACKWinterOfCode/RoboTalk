@@ -1,12 +1,18 @@
 <resources>
     <string name="app_name">RoboTalk</string>
-    <string name="LoginAct">Login Activity</string>
+    <string name="LoginAct">Credentials </string>
     <string name="hintemail">E-mail</string>
     <string name="hintpass">Password</string>
     <string name="Login">Log-in</string>
-    <string name="SignupButton">Not an existing user? Sign up here...</string>
-    <string name="SignUpAct">Sign-Up Activity</string>
+    <string name="SignupButton">Sign-up </string>
+    <string name="SignUpAct">Enter your Credentials</string>
     <string name="hintname">Name</string>
     <string name="hintconpass">Confirm Password</string>
     <string name="SignUp">Sign-up</string>
+    <string name="text_speech"><![CDATA[Text -> Speech]]></string>
+    <string name="speech_text"><![CDATA[Speech -> Text]]></string>
+    <string name="robotalk">RoboTalk</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="skip">Skip to Action</string>
+    <string name="what_to_do">What to do ?</string>
 </resources>

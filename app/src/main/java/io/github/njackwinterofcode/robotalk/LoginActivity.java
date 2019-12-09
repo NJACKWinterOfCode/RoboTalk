@@ -55,8 +55,8 @@ public class LoginActivity extends AppCompatActivity {
             }
         };
         Button button = findViewById(R.id.button);
-        TextView textView = findViewById(R.id.textView3);
-        textView.setOnClickListener(new View.OnClickListener() {
+        Button signup = findViewById(R.id.signup);
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this, signUp.class));
