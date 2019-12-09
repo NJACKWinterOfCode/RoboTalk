@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView password;
     FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
+    Button skip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,17 @@ public class LoginActivity extends AppCompatActivity {
 
         emailID = findViewById(R.id.editText3);
         password = findViewById(R.id.editText4);
+        skip=findViewById(R.id.skip);
         firebaseAuth = FirebaseAuth.getInstance();
+
+        skip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(LoginActivity.this,HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
