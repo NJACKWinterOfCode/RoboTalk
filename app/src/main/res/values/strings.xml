@@ -15,4 +15,7 @@
     <string name="welcome_to">Welcome to</string>
     <string name="skip">Skip to Action</string>
     <string name="what_to_do">What to do ?</string>
+    <string name="convert_to_speech">Convert to Speech</string>
+    <string name="add_text_here">Add text here</string>
+    <string name="text_to_speech">Text to Speech</string>
 </resources>
