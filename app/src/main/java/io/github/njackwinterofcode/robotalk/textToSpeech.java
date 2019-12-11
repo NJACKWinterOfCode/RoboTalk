@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
@@ -55,6 +56,7 @@ public class textToSpeech extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String data = text.getText().toString();
+                text.onEditorAction(EditorInfo.IME_ACTION_DONE);
                 Log.i("TTS", "Button Clicked" + data);
                 int speechStatus = textToSpeech.speak(data, TextToSpeech.QUEUE_FLUSH,null);
 
