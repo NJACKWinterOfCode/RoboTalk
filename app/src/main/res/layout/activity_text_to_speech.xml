@@ -66,20 +66,33 @@
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.279" />
+        app:layout_constraintVertical_bias="0.279"
+        android:progress="50"/>
 
-    <EditText
-        android:id="@+id/speechRate"
-        android:layout_width="380dp"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/speechRate"
-        android:inputType="numberDecimal"
+        android:layout_marginTop="12dp"
+        android:text="@string/speechRate"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/speechRate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.877" />
+
+    <SeekBar
+        android:id="@+id/speechRate"
+        android:layout_width="391dp"
+        android:layout_height="35dp"
+        android:progress="50"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pitch"
-        app:layout_constraintVertical_bias="0.137" />
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.703" />
 
-    
+
 </androidx.constraintlayout.widget.ConstraintLayout>

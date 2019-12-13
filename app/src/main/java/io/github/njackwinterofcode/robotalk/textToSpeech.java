@@ -17,21 +17,19 @@ import java.util.Locale;
 public class textToSpeech extends AppCompatActivity {
 
     private TextToSpeech textToSpeech;
-    EditText text;
+    EditText mtext;
     Button convertButton;
-    SeekBar pitch ;
-    EditText speed;
+    SeekBar mpitch ;
+    SeekBar mspeed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text_to_speech);
 
-        text = findViewById(R.id.editText2);
-        pitch = findViewById(R.id.pitch);
-        speed = findViewById(R.id.speechRate);
-        pitch.setProgress(1);
-
+        mtext = findViewById(R.id.editText2);
+        mpitch = findViewById(R.id.pitch);
+        mspeed = findViewById(R.id.speechRate);
         convertButton = findViewById(R.id.button);
         textToSpeech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
@@ -51,42 +49,26 @@ public class textToSpeech extends AppCompatActivity {
                 }
             }
         });
-
         convertButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String data = text.getText().toString();
-                text.onEditorAction(EditorInfo.IME_ACTION_DONE);
-                Log.i("TTS", "Button Clicked" + data);
-                int speechStatus = textToSpeech.speak(data, TextToSpeech.QUEUE_FLUSH,null);
-
-               try{
-                   textToSpeech.setSpeechRate(Integer.parseInt(speed.getText().toString()));
-               }catch (Exception e){
-                   Toast.makeText(textToSpeech.this, "Speech rate taken as default.", Toast.LENGTH_SHORT).show();
-               }
-                if(speechStatus == TextToSpeech.ERROR){
-                    Log.e("TTS ", "Error in conversion");
-                }
+                speak();
             }
         });
-
-        pitch.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                textToSpeech.setPitch(progress);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
+    }
+    private void speak() {
+        String text = mtext.getText().toString();
+        float pitch = (float) mpitch.getProgress() / 50;
+        if (pitch < 0.1) {
+            pitch = 0.1f;
+        }
+        float speed = (float) mspeed.getProgress() / 50;
+        if (speed < 0.1) {
+            speed = 0.1f;
+        }
+        textToSpeech.setPitch(pitch);
+        textToSpeech.setSpeechRate(speed);
+        textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
     @Override
     protected void onDestroy() {
