@@ -4,7 +4,7 @@ An Android app to convert text to speech and vice versa.
 ## Features
 
 ### Splash 
-This is the introduction to the app.
+This is the home screen of the RoboTalk application.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/SubhradeepSS/RoboTalk/development/splash.jpg" height="400" width="250">
