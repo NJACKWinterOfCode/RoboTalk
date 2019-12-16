@@ -54,9 +54,9 @@ Clicking on START Button starts the recording of speech for conversion to text.
 
 * Do updates on your forked repository (if required).
 
-* After making all the changes in your repo,create a pull request properly stating the updates made by you and if possible provide screenshots.<br/>
-For creating the pull request,click on "New Pull Request" Button present on your forked repo's page which opens a new page,in which there is an area for briefly mentioning the issue you solved/your updates.Finally,click on "Create Pull Request" button.
+* After making all the changes in your repo, create a pull request properly stating the updates made by you and if possible provide screenshots.<br/>
+For creating the pull request,click on "New Pull Request" Button present on your forked repo's page which opens a new page, in which there is an area for briefly mentioning the issue you solved/your updates. Finally, click on "Create Pull Request" button.
 
-* Wait for the collaborators to review your work.If any changes are recommended by them,do so with a proper comment in your pull request.
+* Wait for the collaborators to review your work. If any changes are recommended by them, do so with a proper comment in your pull request.
 
-### For any clarification,please ask the collaborators.
+##### For any clarification, please ask the collaborators.
