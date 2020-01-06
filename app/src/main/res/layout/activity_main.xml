@@ -10,9 +10,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="434dp"
-        android:layout_height="708dp"
-        android:src="@drawable/robologo"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:src="@drawable/robotalklogo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
